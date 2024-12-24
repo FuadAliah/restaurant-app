@@ -2,7 +2,7 @@ import { createTheme } from '@mui/material/styles';
 
 let theme = createTheme({
   typography: {
-    fontFamily: 'Roboto, Arial, sans-serif',
+    fontFamily: "Rubik, sans-serif",
     h2: {
       fontSize: '2rem',
       fontWeight: 500,
@@ -39,23 +39,34 @@ let theme = createTheme({
       },
     },
     MuiDrawer: {
-			styleOverrides: {
-				root: {
-					'& .MuiDrawer-paper': {
-						backgroundColor: "#181818",
-						color: "#FFFFFF",
-						border: 'none'
-					}
-				}
-			}
-		},
+      styleOverrides: {
+        root: {
+          '& .MuiDrawer-paper': {
+            backgroundColor: "#181818",
+            color: "#FFFFFF",
+            border: 'none'
+          }
+        }
+      }
+    },
     MuiToolbar: {
       styleOverrides: {
         root: {
-        backgroundColor: "#FFFFFF",
-        borderBottom: '1px solid #e2e8f0'
+          backgroundColor: "#FFFFFF",
+          borderBottom: '1px solid #e2e8f0'
         }
       }
+    },
+    MuiFab: {
+      defaultProps: {
+        disableRipple: true,
+      },
+      styleOverrides: {
+        root: {
+          textTransform: 'none',
+          boxShadow: '0 2px 5px 0px rgba(0 0 0 / 0.2);'
+        },
+      },
     },
   },
 });

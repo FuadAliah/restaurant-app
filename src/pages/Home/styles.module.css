@@ -1,0 +1,80 @@
+.page {
+	height: 100%;
+	background: var(--mui-palette-grey-100);
+	position: relative;
+	overflow: inherit;
+}
+
+.fuad {
+	color: blue;
+}
+
+
+.header {
+	background-color: var(--mui-palette-primary-main);
+	background-image: url('../../images/HeaderBG.svg');
+	aspect-ratio: 1 / 0.325;
+	min-height: 7.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-bottom: 3rem;
+	padding: 1.5rem;
+	position: relative;
+}
+
+.search {
+	width: calc(100% - 3rem);
+	position: absolute !important;
+	bottom: -1.75rem;
+	background: var(--mui-palette-common-white);
+	border-radius: 0.5rem;
+}
+
+.search .MuiFilledInput-root {
+	border-bottom: none;
+	border-radius: 0.5rem;
+	background-color: var(--mui-palette-common-white);
+	box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.06);
+}
+
+.search .MuiFilledInput-root:after {
+	border-bottom: 0;
+}
+
+.search .MuiFilledInput-root:before {
+	border-bottom: none;
+}
+
+.search .MuiFilledInput-root:hover:not(.Mui-disabled):before {
+	border-bottom: none;
+}
+
+.sideMenu {
+	background-color: var(--mui-palette-primary-main);
+	color: var(--mui-palette-common-white);
+	padding: 1.5rem;
+	position: absolute;
+	width: 80%;
+	height: 100%;
+	z-index: 9;
+	box-shadow: 0 0px 0 110px rgba(0, 0, 0, 0.6);
+}
+
+.sideMenu.in {
+	margin-inline-start: 20%;
+	animation: all 0.4s ease-out;
+}
+
+.sideMenu.out {
+	margin-inline-start: 120%;
+	animation: all 0.4s ease-out;
+}
+
+.body {
+	margin-top: 1.75rem;
+	display: flex;
+	flex-direction: column;
+	gap: .5rem;
+	padding: 1.5rem;
+}

@@ -1,3 +1,3 @@
-export const data = (num: number): number => {
-  return num
+export const currency = (num: number): string => {
+  return `JOD ${num.toFixed(2)}`
 }

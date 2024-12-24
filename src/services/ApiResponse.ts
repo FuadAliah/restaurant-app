@@ -1,4 +1,4 @@
-import { Data } from "../pages/Categories/DataTypes";
+// import { Data } from "../pages/Categories/DataTypes";
 
 export interface ApiResponse {
   statusCode: number;
@@ -10,7 +10,7 @@ export interface ApiResponse {
     nextPage: boolean;
     totalItems: number;
     currentPageItems: number;
-    data: Data[];
+    // data: Data[];
   };
   message: string;
   success: boolean;

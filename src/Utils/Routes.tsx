@@ -1,22 +1,29 @@
 import { createBrowserRouter } from "react-router-dom";
 import ErrorBoundary from "../components/ErrorBoundary";
-import DrawerLayout from "../layouts/Drawer";
-import FullLayout from "../layouts/Full";
-import { Categories, Items } from "../pages";
+import Layout from "../Layout";
+import { lazy } from "react";
+
+// const Detailed = lazy(() => import(/* webpackChunkName: "detailed" */ '../pages/Detailed'));
+
+const Home = lazy(() => import('../pages/Home'));
 
 export const router = createBrowserRouter([
 	{
 		path: '/',
-		element: <DrawerLayout />,
+		element: <Layout />,
 		errorElement: <ErrorBoundary children={<h2>404</h2>} />,
 		children: [
-			{ path: 'categories', element: <Categories /> },
-			{ path: 'items', element: <Items /> },
+			{ path: 'home', element: <Home /> },
 		],
 	},
 	{
-		path: '/login',
-		element: <FullLayout />,
+		path: '/about-restaurant',
+		element: <h4>about-restaurant</h4>,
+		errorElement: <ErrorBoundary children={<h2>404</h2>} />
+	},
+	{
+		path: '/about-us',
+		element: <h4>about-us</h4>,
 		errorElement: <ErrorBoundary children={<h2>404</h2>} />
 	},
 ]);
